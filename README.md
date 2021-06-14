@@ -27,8 +27,12 @@ jare 버전 J2SE-1.5를 수정해야한다
 
 https://mvnrepository.com/
 
+위 사이트에서 아래 두개를 검색하여 붙여넣고 
 hadoop-common 검색
 Apache Hadoop Common » 3.2.2
+hadoop-mapreduce-client
+Apache Hadoop MapReduce Core » 3.2.2
+
 - 최종적으로 이렇게 작성되야함
 
 ```<project xmlns="http://maven.apache.org/POM/4.0.0"
@@ -60,11 +64,14 @@ Apache Hadoop Common » 3.2.2
   </dependencies>
 </project>
 ```
+정렬 및 저장
+- 커맨드 + a, 후 커맨드+ shitf + f
 
 이후에 업데이트 다시시도
 
-정렬 및 저장
-- 커맨드 + a, 후 커맨드+ shitf + f
+프로젝트에서 run as
+clean 이후 install 실행
+
 
 
 3. 패키지및 클래스 생성
