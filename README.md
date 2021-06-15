@@ -87,6 +87,9 @@ reducer/WordCountReducer.java
 
 5. 우분투에서 실행(필요한 디렉토리는 미리 생성해둠)
 bin/yarn jar /media/sf_hadoop/HadoopMR-0.0.1.jar com.J.driver.WordCount wordcount-input wordcount-output
+- 새로운 패키지 및 클래스 추가시 clean, install 새로 실행 후 jar 파일을 옮겨둔다
+bin/yarn jar /media/sf_hadoop/HadoopMR-0.0.1.jar com.J.driver.DepartureDelayCount air-input air-output
+
 
 6. 확인(ls 로 위치를 찾아 파일명을 추가로 입력해서 확인할 수 있다)
 bin/hdfs dfs -text wordcount-output/part-r-00000
