@@ -1,3 +1,7 @@
 com/J/driver/WordCount.class
-com/J/reducer/WordCountReducer.class
+com/J/reducer/DelayCountReducer.class
+com/J/driver/DepartureDelayCount.class
 com/J/mapper/WordCountMapper.class
+com/J/mapper/DepartureDelayCountMapper.class
+com/J/common/AirlinePerformanceParser.class
+com/J/reducer/WordCountReducer.class
