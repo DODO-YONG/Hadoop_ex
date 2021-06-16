@@ -89,7 +89,8 @@ reducer/WordCountReducer.java
 bin/yarn jar /media/sf_hadoop/HadoopMR-0.0.1.jar com.J.driver.WordCount wordcount-input wordcount-output
 - 새로운 패키지 및 클래스 추가시 clean, install 새로 실행 후 jar 파일을 옮겨둔다
 bin/yarn jar /media/sf_hadoop/HadoopMR-0.0.1.jar com.J.driver.DepartureDelayCount air-input air-output
-
+- 오류 표시하는것
+bin/yarn jar /media/sf_hadoop/HadoopMR-0.0.1.jar com.J.driver.DelayCountWithCounter -D workType=departure air-input air-output2
 
 6. 확인(ls 로 위치를 찾아 파일명을 추가로 입력해서 확인할 수 있다)
 bin/hdfs dfs -text wordcount-output/part-r-00000
