@@ -48,9 +48,32 @@ public class DelayCountReducerWithDateKey
 				outputKey.setMonth(bMonth);
 				mos.write("departure", outputKey, result);
 			}
+		} else {
+			for(IntWritable value : values) {
+				if(bMonth != key.getMonth()) {
+					result.set(sum);
+					outputKey.setYear(key.getYear().substring(2));
+					outputKey.setMonth(bMonth);
+					mos.write("arrival", outputKey, result);
+					sum = 0;
+					
+				}
+				sum += value.get();
+				bMonth = key.getMonth();
+			}
+			if (key.getMonth() == bMonth) {
+				result.set(sum);
+				outputKey.setYear(key.getYear().substring(2));
+				outputKey.setMonth(bMonth);
+				mos.write("arrival", outputKey, result);
+			}
 		}
 	}
-	
-	
+	@Override
+	protected void cleanup(Reducer<DateKey, IntWritable, DateKey, IntWritable>.Context context)
+			throws IOException, InterruptedException {
+		// TODO Auto-generated method stub
+		mos.close();
+	}
 	
 }
